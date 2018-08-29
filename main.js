@@ -10,8 +10,8 @@ function buildDom(html) {
 function main(){
 
   var splashMain;
-  var gameMain;
   var gameOverMain;
+  var game;
 
     //----Splash
   function buildSplash(){
@@ -41,16 +41,9 @@ function main(){
     destroySplash();
     destroyGameOver();
     
-    gameMain = buildDom(`
-      <main>
-        <body>
-          <p>this is a new game</p>
-        </body>
-      </main>`
-    );
+    game = new Game();
+    game.start();
   
-    document.body.appendChild(gameMain);
-
     window.setTimeout(function(){
       gameOver();
     }, 3000);
@@ -58,7 +51,7 @@ function main(){
 
   //game over
   function destroyGame(){
-    gameMain.remove();
+    game.destroy();
   };
 
   //----Game Over
