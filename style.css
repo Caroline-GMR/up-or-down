@@ -16,7 +16,7 @@ body {
 /* ---- typography ---- */
 
 body {
-  color: red;
+  color: black;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 147%;
@@ -70,7 +70,6 @@ p {
 
 
 
-
 /* ---- components ---- */
 
 .button {
@@ -84,6 +83,88 @@ p {
   color: blue;
   background-color: #fff;
 }
+
+.game {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.game .deck{
+  flex: 4;
+  display: flex;
+  align-items: center;
+}
+
+.game .timer {
+  flex: 1;  
+}
+
+.game .current-card{
+  flex: 1;
+}
+
+.game .value{
+  font-style: italic;
+}
+
+.game .label{
+  font-weight: bold;
+}
+
+.game .card {
+  height: 200px;
+  line-height: 200px;
+  border: 1px solid #ccc;
+  background-color: #ccc;
+  box-shadow: 2px 2px 2px #ccc;
+  border-radius: 15px;
+
+}
+
+.game .actions{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.game .actions button{
+  flex: 1;
+  height: 80px;
+  font-size: 20px;
+  margin: 0 20px;
+  border: 1px solid black;
+  background-color: hsl(60, 100%, 50%);  
+  cursor: pointer;
+}
+
+.game .actions button:hover{
+  background-color: hsl(60, 100%, 80%); 
+}
+
+.game .actions button:active{
+  background-color: hsl(60, 100%, 40%); 
+}
+
+.game .next-card{
+  flex: 1;
+}
+
+.game footer{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  
+}.game {
+  
+}
+
 
 /* ---- section ---- */
 
